@@ -1,6 +1,3 @@
-fastapi==0.111.0
-uvicorn[standard]==0.30.0
-pydantic==2.7.1
-requests==2.31.0
-torch==2.1.0
-transformers==4.41.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc414c03ed09567c5651a925e3fbb6326ccd32fa886aac916b601454862ea771
+size 116
