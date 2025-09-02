@@ -1,0 +1,354 @@
+/* Overall Profile Modification Container */
+.ProfileModification {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  z-index: 1001;
+  transition: background 0.3s ease;
+}
+
+/* Dark Mode Styling */
+.ProfileModification.dark {
+  background: rgba(0, 0, 0, 0.218);
+}
+
+/* Profile Card Styling */
+.Card {
+  display: flex;
+  flex-direction: column;  /* Stack the content vertically */
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  background: rgba(198, 197, 197, 0.47);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(15, 23, 128, 0.486);
+  border: 1px solid rgba(34, 49, 148, 0.18);
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 10px;
+  height: 80%;
+  position: relative;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+/* Dark Mode Styling for Profile Card */
+.ProfileModification.dark .Card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Input Container (Flexbox for left and right sides) */
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Left and Right Side Styling */
+.left-side, .right-side {
+  width: 48%;
+}
+
+
+/* Input Group Styling */
+.input-group {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+/* Dark Mode Input Label */
+.ProfileModification.dark .input-group label {
+  color: #fff;
+}
+
+/* Input Styling */
+.input-group input {
+  margin-left: 5%;
+  width: 90%;
+  border: 1px solid #2e5bfc; /* Blue border */
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 5px;
+  background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and shadow */
+}
+
+/* Dark Mode Input Styling */
+.ProfileModification.dark .input-group input {
+  border: 1px solid #2e5bfc;
+  background: rgba(0, 0, 0, 0.6); /* Darker background */
+  color: #fff;
+}
+
+/* Focus Effect for Input Fields */
+.input-group input:focus {
+  border-color: #2e5bfc; /* Blue border on focus */
+  box-shadow: 0 0 6px #2e5bfc88; /* Blue glow around input */
+  outline: none;
+}
+
+/* Placeholder Styling */
+.input-group input::placeholder {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* File Input Wrapper for Profile Picture */
+.file-input-wrapper {
+  border: 2px dashed #ccc;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: 35%;
+  margin-bottom: 3%;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark Mode File Input Wrapper */
+.ProfileModification.dark .file-input-wrapper {
+  border: 1px solid #2e5bfc;
+  box-shadow: 0 0 6px #2e5bfc88;
+  background-color: #333;
+}
+
+.file-input-wrapper:hover {
+  background-color: #f2f2f2;
+}
+
+/* Dark Mode File Input Wrapper Hover */
+.ProfileModification.dark .file-input-wrapper:hover {
+  background-color: #444;
+}
+
+.file-input-wrapper input[type="file"] {
+  display: none;
+}
+
+.file-input-wrapper img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Buttons Container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 20px;
+}
+
+/* Modify and Cancel buttons */
+.Modify-Btn, .Cancel-Btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 45%;
+}
+
+/* Modify Button */
+.Modify-Btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Dark Mode Modify Button */
+.ProfileModification.dark .Modify-Btn {
+  background-color: #0056b3;
+}
+
+/* Modify Button Hover */
+.Modify-Btn:hover {
+  background-color: #0056b3;
+}
+
+/* Cancel Button */
+.Cancel-Btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+/* Dark Mode Cancel Button */
+.ProfileModification.dark .Cancel-Btn {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Cancel Button Hover */
+.Cancel-Btn:hover {
+  background-color: #999;
+}
+
+/* Dark Mode Cancel Button Hover */
+.ProfileModification.dark .Cancel-Btn:hover {
+  background-color: #777;
+}
+
+/* Verification Code Styling */
+.Verification-Card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffffa4;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  z-index: 3000;
+}
+
+/* Dark Mode Verification Card */
+.ProfileModification.dark .Verification-Card {
+  border-color: #2e5bfc; /* Blue border on focus */
+  box-shadow: 0 0 6px #2e5bfc88; /* Blue glow around input */
+  background: #10101055;
+  color: #fff;
+}
+
+.verification-code {
+  display: flex;
+  gap: 10px;
+}
+
+.verification-code input {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 8px;
+  border-color: #2e5bfc; /* Blue border on focus */
+  box-shadow: 0 0 6px #2e5bfc88; /* Blue glow around input */
+}
+
+/* Dark Mode Verification Code Inputs */
+.ProfileModification.dark .verification-code input {
+  background: #444;
+  color: #fff;
+  border: 1px solid;
+  border-color: #2e5bfc; /* Blue border on focus */
+  box-shadow: 0 0 6px #2e5bfc88; /* Blue glow around input */
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Dark Mode Card Title */
+.ProfileModification.dark .card-title {
+  color: #fff;
+}
+
+.Card-Buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+/* Position the show-hide button inside the password input field */
+.input-group {
+  position: relative; /* Make the input group a positioning context for the button */
+}
+
+.show-hide-btn- {
+  position: absolute;
+  right: 30px; /* Adjust position to the right side of the input */
+  top: 60%;
+  transform: translateY(-50%); /* Vertically center the button */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Dark Mode Show-Hide Button */
+.ProfileModification.dark .show-hide-btn- {
+  color: #fff;
+}
+
+.delete-group {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+}
+
+/* Delete Button Styling */
+.Delete-Btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e74c3c;  /* Red color for the delete button */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 80%;
+  margin-top: 0px;
+}
+
+/* Dark Mode Delete Button */
+.ProfileModification.dark .Delete-Btn {
+  background-color: #c0392b;  /* Darker red for delete in dark mode */
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+}
+
+/* Delete Button Hover Effect */
+.Delete-Btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Dark Mode Delete Button Hover */
+.ProfileModification.dark .Delete-Btn:hover {
+  background-color: #e74c3c;
+}
+
+/* Delete Icon Styling */
+.Delete-Btn svg {
+  margin-right: 8px; /* Space between the icon and text */
+  font-size: 1.5rem;
+}
+
+.errorinput {
+  border: 2px solid rgb(255, 120, 120) !important;
+}

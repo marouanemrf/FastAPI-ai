@@ -1,0 +1,189 @@
+/* Wrapper général */
+.RoomDetails {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  z-index: 1001;
+}
+
+.ProfileCard {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 90%;
+  background: rgba(198, 197, 197, 0.47);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(15, 23, 128, 0.486);
+  border: 1px solid rgba(34, 49, 148, 0.18);
+}
+
+.ApdateBtn {
+  position: absolute;   
+  text-align: center;
+  background: rgba(91, 90, 90, 0.76);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease;
+  z-index: 10000;
+  margin-left: 15%;
+}
+
+.ApdateBtn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.StatisticSection {
+  flex: 2;
+  background: rgba(72, 71, 71, 0.15);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  overflow-y: auto;
+  overflow: auto; /* Permet le scroll sans afficher la barre */
+  -ms-overflow-style: none;  /* Masque la barre de défilement sur IE/Edge */
+  scrollbar-width: none;  /* Masque la barre de défilement sur Firefox */
+}
+
+.StatisticSection::-webkit-scrollbar {
+  display: none; /* Masque la barre de défilement sur Webkit (Chrome, Safari) */
+}
+
+.StatisticSection h2 {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.PersonalSection {
+  flex: 1;
+  background: rgba(72, 71, 71, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.PersonalSection img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.PersonalSection h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.PersonalSection h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.PersonalSection p {
+  color: #686565;
+  margin: 5px 1px;
+  text-align: center;
+}
+
+/* Statistique individuelle */
+.StatCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.StatCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.stat-title {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Cercle progress */
+.progress-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.progress-circle .bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 10;
+}
+
+.progress-circle .progress {
+  fill: none;
+  stroke: #2e5bfc;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Dark mode */
+.RoomDetails.dark {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.RoomDetails.dark .ProfileCard {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.RoomDetails.dark .StatisticSection {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.RoomDetails.dark .PersonalSection {
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 2px solid #fff;
+}
+
+.RoomDetails.dark .StatCard {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.RoomDetails.dark .StatCard:hover {
+  background: rgba(0, 0, 0, 0.5);
+}

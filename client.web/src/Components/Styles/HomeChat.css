@@ -1,0 +1,330 @@
+.HomeChat {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1;
+}
+
+.HomeChat.light {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.HomeChat.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+.Room {
+  position: absolute;
+  top: 80px;
+  margin-left: 40px;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: #3f3e3e74;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: left 0.3s ease;
+}
+
+.head {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(111, 111, 111);
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ChatInput {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: inherit;
+}
+
+.head .Avatar_ {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.head .ChatRoomName {
+  flex: 1;
+  margin-left: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.head .ArchiveBtn,
+.head .OptionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+  margin-left: 10px;
+}
+
+.HomeChat.light .ArchiveBtn ,
+.HomeChat.light .OptionBtn  {
+  color: #000; 
+}
+
+.HomeChat.dark .ArchiveBtn ,
+.HomeChat.dark .OptionBtn  {
+  color: #fff; 
+}
+
+.ArchiveBtn .Icon.active {
+  color: #007bff; 
+}
+
+.head .ArchiveBtn:hover,
+.head .OptionBtn:hover {
+  color: #007bff;
+}
+
+.OptionsCard {
+  position: absolute;
+  top: 40px; 
+  right: 20px; 
+  background: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.HomeChat.dark .OptionsCard {
+  background: #333333d4;
+  border: none;
+}
+
+.OptionItem {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-weight: bold;
+}
+
+.HomeChat.dark .OptionItem {
+  color: #fff;
+} 
+
+.OptionItem:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.HomeChat.dark .OptionItem:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.Input-mgs {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  background-color: #d8d8d8b3;
+  color: #000;
+  transition: background 0.3s ease;
+}
+
+.HomeChat.dark .Input-mgs {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+.Input-mgs::placeholder {
+  color: #888;
+}
+
+.HomeChat.dark .Input-mgs::placeholder {
+  color: #ccc;
+}
+
+.SendBtn {
+  background-color: #0037ff;
+  border: none;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.SendBtn:hover {
+  background-color: #0056b3;
+}
+
+.IconSend {
+  margin-left: 2px;
+  font-size: 1.2rem;
+}
+
+.Conversation {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(111, 111, 111);
+  scrollbar-width: none;
+  overflow-x: hidden; /* Add this line */
+}
+
+
+.Conversation::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.Conversation::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.Conversation:not(:hover)::-webkit-scrollbar {
+  display: none;
+}
+
+.NewMessageNotification {
+  position: absolute; 
+  bottom: 80px;      
+  left: 50%;          
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #484848;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.NewMessageNotification:hover {
+  opacity: 1;
+}
+
+.TimeMarker {
+  align-self: center;
+  font-size: 0.75rem;
+  color: #999;
+  margin: 10px 0;
+  text-align: center;
+}
+
+
+.TimeMarker {
+  align-self: center;
+  font-size: 0.75rem;
+  color: #0b47f9;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.MessageWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.MessageWrapper.user {
+  justify-content: flex-end;
+}
+
+.MessageWrapper.bot {
+  justify-content: flex-start;
+}
+
+.MessageBubble {
+  position: relative;
+  max-width: 70%;
+  padding: 10px 12px;
+  border-radius: 18px;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.MessageBubble.user {
+  background: #3777bbc9; 
+  color: #000;
+  border-bottom-right-radius: 4px;
+}
+
+.MessageBubble.bot {
+  background: #ffffffd0;
+  color: #000;
+  border-bottom-left-radius: 4px;
+}
+
+.HomeChat.dark .MessageBubble.bot {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+.MessageText {
+  display: block;
+}
+
+.MessageTime {
+  display: block;
+  font-size: 0.7rem;
+  text-align: right;
+  margin-top: 2px;
+  opacity: 0.6;
+}
+
+.HomeChat.dark .MessageBubble.bot::after {
+  border-top-color: #2b2b2b;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  z-index: 1003;
+  background-color: transparent;
+  border: none;
+  font-size: xx-large;
+  color: #0037ff;
+}
+
+.closeBtn:hover {
+  color: #38479c;
+}

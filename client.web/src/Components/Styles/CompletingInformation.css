@@ -1,0 +1,131 @@
+.CompletingInformation {
+  position: relative;
+  margin-left: 10%;
+  margin-top: 2%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  z-index: 2001;
+}
+
+.CompletingInformation.dark {
+  --background-color: #121212;
+  --text-color: #ffffff;
+}
+
+.CompletingInformation.light {
+  --background-color: #f9f9f992;
+  --text-color: #333;
+}
+
+
+.form-container {
+  position: relative;
+  background-color: var(--form-background);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  z-index: 2001;
+}
+
+.CompletingInformation.dark .form-container {
+  --form-background: #1e1e1e91;
+}
+
+.CompletingInformation.light .form-container {
+  --form-background: #ffffff89;
+}
+
+h2.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.nickname-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.generate-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.generate-btn:hover {
+  background-color: #45a049;
+}
+
+.file-input-wrapper {
+  border: 2px dashed #ccc;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  margin-left: 30%;
+}
+
+.file-input-wrapper input[type="file"] {
+  margin-top: 10px;
+}
+
+.file-input-wrapper label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.skip-btn, .save-btn {
+  padding: 15px 70px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.skip-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.skip-btn:hover {
+  background-color: #e53935;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}

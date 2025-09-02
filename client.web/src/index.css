@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body.light {
+  background: #f9f9f9;
+  color: #222;
+  overflow-x: hidden;
+}
+
+body.dark {
+  background: #121212;
+  color: #eee;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+body.light a {
+  color: #007bff;
+}
+
+body.dark a {
+  color: #66aaff;
+}
+
+.feature-card {
+  transition: background 0.3s ease;
+}
+
+body.light .feature-card {
+  background: #fff;
+  color: #222;
+}
+
+body.dark .feature-card {
+  background: #1f1f1f;
+  color: #eee;
+}
+

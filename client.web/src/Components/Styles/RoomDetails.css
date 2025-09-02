@@ -1,0 +1,212 @@
+.Room_Details {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: 1001;
+}
+
+.Ca_rd {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 90%;
+  background: rgba(198, 197, 197, 0.47);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(15, 23, 128, 0.486);
+  border: 1px solid rgba(34, 49, 148, 0.18);
+}
+
+/* Basic Info - LEFT */
+.BasicInfo {
+  width: 250px;
+  background: rgba(72, 71, 71, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.3); /* حد فليسار */
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* مهم للأيقونة */
+}
+
+.Avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+  margin-top: 18%;
+}
+
+.AvatarName {
+  text-align: center;
+  color: #fff;
+  font-size: 2.7rem;
+  font-weight: bold;
+  max-width: 260px;
+}
+
+.CreationDate {
+  margin-top: 10px;
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.Apdate-Btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease;
+  z-index: 10000;
+}
+
+.Apdate-Btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.Room_Details.dark .Ca_rd {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.Room_Details.dark .BasicInfo {
+  border-right: 2px solid #fff;
+}
+
+.Room_Details.dark .AvatarName {
+  color: #ccc;
+}
+
+.Room_Details.dark .ApdateBtn:hover {
+  color: #00bfff;
+}
+
+/* Statistic Info - RIGHT */
+.StatisticInfo {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  width: 100%;
+  background: rgba(72, 71, 71, 0.1);
+  overflow: auto; /* Permet le scroll sans afficher la barre */
+  -ms-overflow-style: none;  /* Masque la barre de défilement sur IE/Edge */
+  scrollbar-width: none;  /* Masque la barre de défilement sur Firefox */
+}
+
+.StatisticSection::-webkit-scrollbar {
+  display: none; /* Masque la barre de défilement sur Webkit (Chrome, Safari) */
+}
+
+
+.StatisticInfo h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #fff;
+  margin-left: 1%;
+}
+
+.Stat-Sociability,
+.Stat-Humor,
+.Stat-Seriousness,
+.Stat-Emotional,
+.Stat-Curiosity,
+.Stat-Authority,
+.Stat-Spirituality,
+.Stat-Skepticism,
+.Stat-Naivety,
+.Stat-Darkness {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 13px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.Stat-Sociability:hover,
+.Stat-Humor:hover,
+.Stat-Seriousness:hover,
+.Stat-Emotional:hover,
+.Stat-Curiosity:hover,
+.Stat-Authority:hover,
+.Stat-Spirituality:hover,
+.Stat-Skepticism:hover,
+.Stat-Naivety:hover,
+.Stat-Darkness:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-title {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.Room_Details.dark .Stat-Sociability,
+.Room_Details.dark .Stat-Humor,
+.Room_Details.dark .Stat-Seriousness,
+.Room_Details.dark .Stat-Emotional,
+.Room_Details.dark .Stat-Curiosity,
+.Room_Details.dark .Stat-Authority,
+.Room_Details.dark .Stat-Spirituality,
+.Room_Details.dark .Stat-Skepticism,
+.Room_Details.dark .Stat-Naivety,
+.Room_Details.dark .Stat-Darkness {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Progress */
+.progress-container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.progress-bar path {
+  fill: none;
+  stroke-width: 12;
+  stroke: #eee;
+}
+
+.progress-bar .progress {
+  stroke: #1c3475;
+  stroke-dasharray: 126;
+  stroke-dashoffset: 126;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+}

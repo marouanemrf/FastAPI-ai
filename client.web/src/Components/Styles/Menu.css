@@ -1,0 +1,140 @@
+.Sidebar-container {
+  position: fixed;  
+  top: 70px; 
+  left: 0;
+  width: 50px;
+  height: calc(100% - 70px);
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  transform: translateX(12%);
+  z-index: 10;
+  border-radius: 10px;
+  padding: 5% 10px 10px 10px;
+  box-shadow: 2px 0 8px rgba(38, 38, 38, 0.1);  
+}
+
+.Sidebar-container.open {
+  background-color: #f0f0f0;
+  width: 170px;
+  transform: translateX(4.5%);
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.Sidebar-container.dark {
+  background-color: #1a1a1a;
+}
+
+.Sidebar-container.light {
+  background-color: #f0f0f0;
+}
+
+.Menu-Button, .Create-Button, .Archive-Button {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.Sidebar-container.dark .Menu-Button,
+.Sidebar-container.dark .Create-Button,
+.Sidebar-container.dark .Archive-Button {
+  color: #fff;
+}
+
+.Sidebar-container.light .Menu-Button,
+.Sidebar-container.light .Create-Button,
+.Sidebar-container.light .Archive-Button {
+  color: #333;
+}
+
+.Menu-Button:hover, .Create-Button:hover, .Archive-Button:hover {
+  color: #007bff;
+}
+
+/* Arrow Button (Hide/Show) */
+.Show-Hide {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-bottom: 5%;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.Show-Hide:hover {
+  color: #007bff;
+}
+
+.Fiarrow {
+  font-size: 24px;
+}
+
+/* Icons */
+.Fialighjustify, .CreateIO, .Archive {
+  margin-right: 10px;
+}
+
+/* Add smooth hover transitions for buttons */
+.Menu-Button:hover .Fialighjustify, 
+.Create-Button:hover .CreateIO, 
+.Archive-Button:hover .Archive {
+  transform: scale(1.5);
+  color: #007bff;
+}
+
+p:hover {
+  transform: scale(1.05);   
+  color: #007bff;   
+}
+
+/* Navbar Compatibility */
+.navbar-container {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-container.light {
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+.navbar-container.dark {
+  background-color: #1a1a1a;
+  color: #eee;
+}
+
+.navbar-links a {
+  margin-left: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-container.light .navbar-links a {
+  color: #007bff;
+}
+
+.navbar-container.light .navbar-links a:hover {
+  color: #0056b3;
+}
+
+.navbar-container.dark .navbar-links a {
+  color: #66aaff;
+}
+
+.navbar-container.dark .navbar-links a:hover {
+  color: #99ccff;
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container {
+  background: var(--container-night-bg);
+}
